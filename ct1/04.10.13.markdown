@@ -1,0 +1,42 @@
+#Assembler
+
+##Datentransfer
+Wie werden Daten bewegt?
+Mit 43% sind Datentransfer die häufigsten Bewegungen
+
+`Siehe Lernziele Folie`
+
+##Assembler Code
+- Prozessoren können nur binär codierte Befehle intepretieren
+- Assemblerbefehle bestehen aus einem Mnemonic und den entsprechenden Operanden
+Beispiel indirekte Adressierung:
+> MOV SI,2002h ;set SI to 2002h
+> MOV AX, [SI] ;move data from SI to AX
+
+- Assemblerbefehle --> auf einer Zeile geschrieben (bestehen aus 4 Feldern): Label, Befehl, Operanden, Kommentar
+- Integer Datentypen
+	- Speicher ist in der Regel in Bytes organisiert
+	- Daten ufassen aber oft Gruppen von Bytes
+	- char (1), short (2), int (2), long int (4), char* (2): ist bei IA32 und x86-64 anderst.
+##Datenorganisation im Hauptspeicher
+
+- Wie sind die Gruppen im Speicher angeordnet? (Little endian vs Big Endian: Adressen werden vertauscht ((kommt zuerst das höherwertige oder zuerst das niederwertige?))
+`siehe Folie in Vorlesung (Roger/Federer Beispiel)`
+
+##Datentransfer CPU - Speicher
+Vier Möglichkeiten:
+Seite 17 Folie Bild
+- Immediate Adressierung: Konstante umittelbar hinter dem Befehl angegeben [not complete]
+- Direkte Adressierung: Adresse direkt im Befehl angegeben. MOV AX, DS: [5430h]
+- 
+[Very incomplete]
+##Arrays
+- Eine Menge gleicher Elemente
+- Variablendefinition --> Allokation von Speicherplatz
+    Array of char: A86 cTable DB 4 DUP
+	Array of int: A86 iTable DW 4 DUP
+##Pointer und Referen
+
+##Nomal iwas
+
+

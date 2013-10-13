@@ -26,3 +26,4 @@ Session.vim
 *.mtc1
 *.out
 *.synctex.gz
+*.swp
