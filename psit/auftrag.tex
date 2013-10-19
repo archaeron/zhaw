@@ -4,39 +4,57 @@
 \usepackage{amsmath}
 \usepackage{url}
 
-\author{Joris Damian Morger, IT12T}
+\author{Joris Damian Morger, Nicolas Gagliani, IT12T}
 
 \title{Zweikörpersysteme - Auftrag PSIT HS 2013}
 
 \begin{document}
-	\bibliographystyle{plain}
+	\bibliographystyle{ieeetr}
 	\bibliography{auftrag}
 	\maketitle
-	
 
-	\section*{Intro}	
+	\section*{Intro}
 
 	Wir betrachten im folgenden zwei isolierte Körper Erde und Mond mit den Massen $m_{Mond}$ und $M_{Erde}$, wobei der Mond in ellipsenförmig um die Erde rotiert.
 	\par
 	\bigskip
 	Per Definition:
-	$m_{Mond} = 7.35 \times 10^{24} kg$ \cite{wiki1}
+	$$m_{\text{M}} = 7.35 \times 10^{24} \text{ kg} \cite{wiki1}$$
 
-	$m_{Erde} = 5.79 \times 10^{24} kg$ \cite{wiki1}
+	$$m_{\text{E}} = 5.79 \times 10^{24} \text{ kg} \cite{wiki1}$$
 
-	$d_{MondErde} (Abstand) = 384 400 km$ \cite{wiki2}
+	$$r_{\text{ME}} (Abstand) = 384'400 \text{ km} \cite{wiki2}$$
 
-	$g = 6,6742e^{-22} \frac{m^{3} }{kg*s^{2} }$ 
+	$$\gamma = 6.6742e^{-22} \frac{m^{3} }{kg \cdot s^{2} }$$
 	\section*{Teil A}
 
+	\subsection{Gravitationskraft}
 	Erde und Mond ziehen sich an. Die Kraft zwischen den beiden Massen lässt sich wie folgt berechnen:
-	\par
-	\bigskip
-	${F_{G,M}} = g \cdot \frac{{{m_Erde} \cdot {m_Mond}}}{{{d_{MondErde}}}^2}} = todo$
 
+	$$F_{G,M} = \gamma \cdot \frac{{m_\text{E} \cdot m_{\text{M}}}}{{{|{\vec{r_{ME}}}}|^2}}} = -1.9 \cdot 10^{20} \cdot \abs{\vec{n}}$$
 
-	\par
-	\bigskip
+	\subsection{Kreisbewegung}
+	Für die Kreisbewegung gilt:
+	$$\vec{r}(t) =
+		\[ \left( \begin{array}{cc}
+			r \cdot cos(\omega t)\\
+			r \cdot sin(\omega t)\\
+		\end{array} \right)\]
+	$$
+
+	$$\vec{v}(t) = \dot{\vec{r}}(t)
+		\[ \left( \begin{array}{cc}
+			-r \omega \cdot -sin(\omega t)\\
+			r \omega \cdot cos(\omega t)\\
+		\end{array} \right)\]
+	$$
+
+	$$\vec{a}(t) = \dot{\vec{v}}(t)
+		\[ \left( \begin{array}{cc}
+			-r \omega^2 \cdot cos(\omega t)\\
+			-r \omega^2 \cdot sin(\omega t)\\
+		\end{array} \right)\]
+	$$
 
 	% \includegraphics*[100,100][300,300]{situationsskizze}
 
