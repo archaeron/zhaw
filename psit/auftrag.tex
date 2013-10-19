@@ -19,19 +19,30 @@
 	\par
 	\bigskip
 	Per Definition:
-	$$m_{\text{M}} = 7.35 \times 10^{24} \text{ kg} \cite{wiki1}$$
+	$$m_{\text{M}} = 7.35 \times 10^{22} \text{ kg} \cite{wiki1}$$
 
 	$$m_{\text{E}} = 5.79 \times 10^{24} \text{ kg} \cite{wiki1}$$
 
-	$$r_{\text{ME}} (Abstand) = 384'400 \text{ km} \cite{wiki2}$$
+	$$r_{\text{ME}} (Abstand) = 3,844 \cdot 10^8 \text{ m} \cite{wiki2}$$
 
 	$$\gamma = 6.6742e^{-22} \frac{m^{3} }{kg \cdot s^{2} }$$
-	\section*{Teil A}
 
+
+	\section*{Teil A}
 	\subsection{Gravitationskraft}
 	Erde und Mond ziehen sich an. Die Kraft zwischen den beiden Massen lässt sich wie folgt berechnen:
 
-	$$F_{G,M} = \gamma \cdot \frac{{m_\text{E} \cdot m_{\text{M}}}}{{{|{\vec{r_{ME}}}}|^2}}} = -1.9 \cdot 10^{20} \cdot \abs{\vec{n}}$$
+	Wir wissen:
+
+	$$T = 27,3217d \approx 2360594s$$
+	$$\omega = \frac{2\pi}{T}$$
+	$$F_{Z} = m\omega^2r$$
+
+	Daher:
+	$$\omega_\text{M} = \frac{2\pi}{T} = \frac{2\pi}{27,3217d} = \frac{2\pi}{2360594s} \approx 2.66\cdot10^{-6} s^{-1}$$
+	$$F_\text{Z} = m_\text{M} \cdot \omega_\text{M}^2 \cdot r_\text{ME} \approx 2 \cdot 10^{20} N$$
+
+	$$F_{G,M} = \gamma \cdot \frac{{m_\text{E} \cdot m_{\text{M}}}}{{{|{\vec{r_{ME}}}}|^2}}} \cdot \vec{n} \approx -2 \cdot 10^{20} N$$
 
 	\subsection{Kreisbewegung}
 	Für die Kreisbewegung gilt:
