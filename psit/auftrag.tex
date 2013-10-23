@@ -3,15 +3,22 @@
 \usepackage[numbers]{natbib}
 \usepackage{amsmath}
 \usepackage{url}
+\usepackage{graphicx}
+\usepackage{floatrow}
+\usepackage{pdfpages}
+\usepackage{csvsimple}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{filecontents}
 
 \author{Joris Damian Morger, Nicolas Manuel Alessandro Gagliani, IT12T}
 
 \title{Zweikörpersysteme - Auftrag PSIT HS 2013}
 
 \begin{document}
-	\bibliographystyle{ieeetr}
-	\bibliography{auftrag}
 	\maketitle
+
+	\includepdf[pages={1}]{PhITAuftr1.pdf}
 
 	\section*{Intro}
 
@@ -44,32 +51,47 @@
 
 	$$F_{G,M} = \gamma \cdot \frac{{m_\text{E} \cdot m_{\text{M}}}}{{{|{\vec{r_{ME}}}}|^2}}} \cdot \vec{n} \approx -2 \cdot 10^{20} N$$
 
-	\subsection{Kreisbewegung}
-	Für die Kreisbewegung gilt:
-	$$\vec{r}(t) =
-		\[ \left( \begin{array}{cc}
-			r \cdot cos(\omega t)\\
-			r \cdot sin(\omega t)\\
-		\end{array} \right)\]
-	$$
+	Aha! Da die Zentripedalkraft vom Mond und die Gravitationskraft zwischen Mond und Erde die gleiche ist, einfach mit anderem Vorzeichen (also Kraft in andere Richtung), erkennen wir das der Mond und die Erde sich in Balance halten. Sie prallen weder aufeinander, noch bewegen sie sich voneinander weg.
 
-	$$\vec{v}(t) = \dot{\vec{r}}(t)
-		\[ \left( \begin{array}{cc}
-			-r \omega \cdot -sin(\omega t)\\
-			r \omega \cdot cos(\omega t)\\
-		\end{array} \right)\]
-	$$
+	Bisher haben wir vernachlässigt das der Radius vom Mond zur Erde nicht immer gleich gross ist, da die Erde sich auch noch um eine Achse dreht.
 
-	$$\vec{a}(t) = \dot{\vec{v}}(t)
-		\[ \left( \begin{array}{cc}
-			-r \omega^2 \cdot cos(\omega t)\\
-			-r \omega^2 \cdot sin(\omega t)\\
-		\end{array} \right)\]
-	$$
+	\begin{figure}[h!]
+			\caption{Radius verändert sich}
+		    \centering
+			    \includegraphics[width=0.5\textwidth]{radius}
+	\end{figure}
+
+
+	Daher müssen wir eine Funktion finden die den Radius zwischen Mond und Erde genauer beschreibt.
+
+	Wir wissen der Massenmittelpunkt zwischen Erde und Mond ist
+		$$ r_\text{T} = \frac{r_\text{M}}{r_\text{E}} = \frac{1}{81} = 4'683 \text{km} $$
 
 	% \includegraphics*[100,100][300,300]{situationsskizze}
 
 
+	\section*{Teil B}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=15cm, height=8cm,     % size of the image
+			grid = major,
+			grid style={dashed, gray!30},
+			xmin=-600000000,     % start the diagram at this x-coordinate
+			xmax=600000000,    % end   the diagram at this x-coordinate
+			ymin=-400000000,     % start the diagram at this y-coordinate
+			ymax=400000000,   % end   the diagram at this y-coordinate
+			ylabel=test,
+			xlabel=moon,
+			]
 
+		\end{axis}
+	\end{tikzpicture}
+
+	Eigentlich hatten wir die Lösung schon längst in Berkeley Madonna, haben aber die längste Zeit nach einem Fehler gesucht der eigentlich keiner war. Das Problem war das wir im Parameter Window zu wenige Zeitschritte gemacht haben und zu früh aufgehört haben. So haben wir nie gesehen wie die eigentliche Kurve sich entwickelt hat. 
+	\section*{Teil C}
+	\section*{Teil D}
+
+	\bibliographystyle{ieeetr}
+	\bibliography{auftrag}
 \end{document}
 
