@@ -27,3 +27,5 @@ Session.vim
 *.out
 *.synctex.gz
 *.swp
+*.swp
+*.vim
